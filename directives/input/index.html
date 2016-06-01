@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="todoApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="controller.js"></script>
+   <!-- <link rel="stylesheet" href="todo.css">-->
+  </head>
+  <body>
+    <h2>Todo</h2>
+
+    change in controller update in directive and vise varsa
+    <div style="border:2px solid red;">
+
+    <div ng-controller="TodoListController">
+     
+ <input type="text" ng-model="customer.name">
+
+    <div my-customer></div>
+    </div>
+    </div><br/><br/>
+    <div style="border:2px solid green;height:20px;" ng-controller="TodoListController1">
+    	<div my-customer1></div>
+    </div>
+  </body>
+</html>

@@ -9,14 +9,36 @@
 <body ng-app="myApp">
 
 	Basic Example
-	<div ng-controller="basicCtrl" style="background-color:green;width:100%;height:50px;">
+	<div ng-controller="basicCtrl" style="background-color:green;width:100%;height:50px;padding:10px;">
 		<div my-basic ></div>
 	</div>
 
 	Isolation
-	<div ng-controller="isolationCtrl" style="background-color:red;width:100%;height:50px;">
-		<div my-isolation info="ravi"></div>
-		<div my-isolation info="cust"></div>
+	<div ng-controller="isolationCtrl" style="background-color:red;width:100%;height:100%;padding:10px;">
+		<div >
+			<div my-isolation info="ravi"></div>
+			<div my-isolation info="cust"></div>
+		</div>
+
+		<div style="background-color:pink; color:green;">
+		attr name same as the scope value in directive
+			<div my-isolationsameattr info="ravi"></div>
+			<div my-isolationsameattr info="cust"></div>
+		</div>
+
+		<div style="background-color:black; color:white;">
+		    Besides making it possible to bind different data to the scope inside a directive, using an isolated scope has another effect
+		    As the name suggests, the isolate scope of the directive isolates everything except models that you've explicitly added to the scope: {} hash object. This is helpful when building reusable components because it prevents a component from changing your model state except for the models that you explicitly pass in.
+			<div my-isolationdiffscope info="ravi"></div>
+			<div my-isolationdiffscope info="cust"></div>
+		</div>
+	</div>
+
+
+	Creating a Directive that Manipulates the DOM
+	<div ng-controller="domCtrl" style="background-color:green;width:100%;height:100%;padding:10px;">
+		Date format: <input ng-model="format"> <hr/>
+  		Current time is: <span my-current-time="format"></span>
 	</div>
 
 </body>
