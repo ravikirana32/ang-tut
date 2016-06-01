@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directive Examples</title>
+	<script type="text/javascript" src="../lib/angular.js"></script>
+	<script type="text/javascript" src="directive.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+</head>
+<body ng-app="myApp">
+
+	Basic Example
+	<div ng-controller="basicCtrl" style="background-color:green;width:100%;height:50px;">
+		<div my-basic ></div>
+	</div>
+
+	Isolation
+	<div ng-controller="isolationCtrl" style="background-color:red;width:100%;height:50px;">
+		<div my-isolation info="ravi"></div>
+		<div my-isolation info="cust"></div>
+	</div>
+
+</body>
+</html>
